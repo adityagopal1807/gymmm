@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FitAura Membership</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+    .button {
+      background-color: #f44336; /* Orange */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #d93629;
+    }
+
+    .cart {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #222;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      display: none;
+    }
+
+    .cart.show {
+      display: block;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .cart-item .quantity {
+      font-size: 12px;
+    }
+
+    .cart-total {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .cart-button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cart-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>FitAura</h1>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Classes</a></li>
+        <li><a href="#">Schedules</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="button">Sign Up</a></li>
+        <li><a href="#" class="button">Create Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200.png" alt="Yoga">
+      <h3>Yoga Membership</h3>
+      <p>Unlimited yoga classes with experienced instructors.</p>
+      <p>Rs. 3000 per month</p>
+      <button class="button" onclick="addToCart('Yoga', 3000)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200.png" alt="Aerobics">
+      <h3>Aerobics Membership</h3>
+      <p>High-energy aerobics classes to boost your fitness.</p>
+      <p>Rs. 2500 per month</p>
+      <button class="button" onclick="addToCart('Aerobics', 2500)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200.png" alt="Cardio">
+      <h3>Cardio Membership</h3>
+      <p>Intense cardio workouts to burn calories and improve endurance.</p>
+      <p>Rs. 2000 per month</p>
+      <button class="button" onclick="addToCart('Cardio', 2000)">Add to Cart</button>
+    </div>
+  </section>
+
+  <div class="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p class="cart-total">Total: Rs. <span id="cart-total-amount">0</span></p>
+    <button class="cart-button" onclick="checkout()">Checkout</button>
+  </div>
+
+  <script>
+    let cart = {};
+
+    function addToCart(item, price) {
+      if (cart[item]) {
+        cart[item]++;
+      } else {
+        cart[item] = 1;
+      }
+      updateCart();
+    }
+
+    function updateCart() {
+      let cartItems = document.getElementById('cart-items');
+      cartItems.innerHTML = '';
+
+      let totalAmount = 0;
+
+      for (let item in cart) {
+        let itemPrice = cart[item] * item;
+        totalAmount += itemPrice;
+
+        cartItems.innerHTML += `
+          <div class="cart-item">
+            <span>${item} x ${cart[item]}</span>
+            <span class="quantity">Rs. ${itemPrice}</span>
+          </div>
+        `;
+      }
+
+      document.getElementById('cart-total-amount').innerText = totalAmount;
+      document.querySelector('.cart').classList.add('show');
+    }
+
+    function checkout() {
+      alert('Checkout functionality not yet implemented!');
+    }
+  </script>
+</body>
+</html>

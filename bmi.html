@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+          .cnt {
+        background-color: #181818; /* Black background */
+        color: #fff; /* White text */
+        font-family: sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container1 {
+        background-color: #282828; /* Darker gray background for the container */
+        padding: 38px;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        text-align: center;
+        flex: 1 1 300px;
+        margin: 10px;
+    }
+
+    .head {
+        color: #ff5733; /* Orange heading */
+        margin-bottom: 20px;
+    }
+
+    .inp1[type="number"], .slc {
+        width: 100px;
+        padding: 12px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #181818; /* Black background for inputs */
+        color: #fff; /* White text for inputs */
+    }
+
+    .btn1 {
+        background-color: #ff5733; /* Orange button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn1:hover {
+        background-color: #f44336; /* Darker orange on hover */
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .bmi-chart {
+        flex: 1 1 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .bmi-chart img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .container1, .bmi-chart {
+            flex: 1 1 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="cnt">
+    <div class="container1">
+        <h1>BMI Calculator</h1>
+        <label for="weight">Weight:</label>
+        <input class="inp1" type="number" id="weight" placeholder="Enter weight">
+        <select class="slc" id="weightUnit">
+            <option value="kg">kg</option>
+            <option value="lbs">lbs</option>
+        </select><br>
+
+        <label for="height">Height:</label>
+        <input class="inp1" type="number" id="height" placeholder="Enter height">
+        <select class="slc" id="heightUnit">
+            <option value="cm">cm</option>
+            <option value="ft">ft</option>
+        </select><br>
+        <br>
+
+        <button class="btn1" onclick="calculateBMI()">Calculate</button>
+        <div id="result"></div>
+    </div>
+    <div class="bmi-chart">
+        <img src="https://www.hdfcergo.com/images/default-source/health-insurance/how-reliable-is-the-bmi-measure.svg" height="425" alt="BMI Chart">
+    </div>
+    </div>
+
+    <script>
+        function calculateBMI() {
+            let weight = parseFloat(document.getElementById('weight').value);
+            let height = parseFloat(document.getElementById('height').value);
+            let weightUnit = document.getElementById('weightUnit').value;
+            let heightUnit = document.getElementById('heightUnit').value;
+
+            // Convert weight to kg if necessary
+            if (weightUnit === 'lbs') {
+                weight = weight * 0.453592;
+            }
+
+            // Convert height to meters if necessary
+            if (heightUnit === 'ft') {
+                height = height * 0.3048;
+            } else if (heightUnit === 'cm') {
+                height = height / 100;
+            }
+
+            let bmi = weight / (height * height);
+            document.getElementById('result').innerText = "Your BMI is: " + bmi.toFixed(2);
+        }
+    </script>
+</body>
+</html>

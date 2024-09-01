@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>FitAura</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <!--main page css-->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+/* bmi */  .cnt {
+        background-color: #181818; /* Black background */
+        color: #fff; /* White text */
+        font-family: sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container1 {
+        background-color: #282828; /* Darker gray background for the container */
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        text-align: center;
+        flex: 1 1 300px;
+        margin: 45px;
+    }
+
+    .head {
+        color: #ff5733; /* Orange heading */
+        margin-bottom: 20px;
+    }
+
+    .inp1[type="number"], .slc {
+        width: 140px;
+        padding: 12px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #181818; /* Black background for inputs */
+        color: #fff; /* White text for inputs */
+    }
+
+    .btn1 {
+        background-color: #ff5733; /* Orange button */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .btn1:hover {
+        background-color: #f44336; /* Darker orange on hover */
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .bmi-chart {
+        flex: 1 1 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .bmi-chart img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .container1, .bmi-chart {
+            flex: 1 1 100%;
+        }
+    }
+        
+    </style>
+</head>
+<body dat-spy="scroll" data-target="#navbarNav" data-offset="50">
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- FitAura Logo -->
+            <a class="navbar-brand" href="index.html">
+               <img src="images/1.jpg.png" width="100px" height="50px"  >
+                FitAura
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="main.html" class="nav-link smoothScroll">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="class.html" class="nav-link smoothScroll">Classes</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="time.html" class="nav-link smoothScroll">Schedules</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link smoothScroll">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="button-group">
+                    <li><a href="sign.html" class="btn custom-signup-btn">Sign Up</a></li>
+                </ul>
+                <ul class="social-icon ml-lg-3">
+                    <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                    <li><a href="" class="fa fa-twitter"></a></li>
+                    <li><a href="" class="fa fa-instagram"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>    
+    </div>
+</div>
+</nav>
+     <!-- HERO -->
+     <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+            <div class="bg-overlay"></div>
+               <div class="container">
+                    <div class="row">
+                         <div class="col-lg-8 col-md-10 mx-auto col-12">
+                              <div class="hero-text mt-5 text-center">
+
+                                    <h6>Build a Healthy Lifestyle!</h6>
+
+                                    <h1 class="text-white"  >Upgrade your body at FitAura Fitness</h1>
+
+                                    <a href="#feature" class="btn custom-btn mt-3"  >Get started</a>
+
+                                    <a href="#about" class="btn custom-btn bordered mt-3"  >learn more</a>
+                                   
+                              </div>
+                         </div>
+
+                    </div>
+               </div>
+     </section>
+
+     <section class="feature" id="feature">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex flex-column justify-content-center ml-lg-auto mr-lg-5 col-lg-5 col-md-6 col-12">
+                    <h2 class="mb-3 text-white" >New to the FitAura?</h2>
+
+                    <h6 class="mb-4 text-white" >Your membership for 2 months (Rs.5000)</h6>
+
+                    <p  >FitAura will help you to maintain your health and fitness you will find only at <a rel="nofollow" href="#home" target="_parent">FitAura</a> </p>
+
+                    <a href="" class="btn custom-btn bg-color mt-3"   data-toggle="modal" data-target="#membershipForm">Become a member today</a>
+                </div>
+
+                <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
+                     <div class="about-working-hours">
+                          <div>
+
+                                <h2 class="mb-4 text-white" >Working hours Trainers</h2>
+
+                               <strong class="d-block" >Sunday : OFF</strong>
+
+                               <strong class="mt-3 d-block" >Monday - Friday</strong>
+
+                                <p  >7:00 AM - 10:00 PM</p>
+
+                                <strong class="mt-3 d-block" >Saturday</strong>
+
+                                <p >6:00 AM - 4:00 PM</p>
+
+                               </div>
+
+                          </div>
+
+                     </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+     <!-- ABOUT -->
+     <section class="about section" id="about">
+               <div class="container">
+                    <div class="row">
+
+                            <div class="mt-lg-5 mb-lg-0 mb-4 col-lg-5 col-md-10 mx-auto col-12">
+                                <h2 class="mb-4" >Hello, we are FitAura</h2>
+
+                                <p  >WE can assure you that ,if you join us you will surely maintain your Health and Fitness.</p>
+
+                                <p   >If you have any question regarding <a rel="nofollow" href="" target="_parent">FitAura Membership</a>, you can <a rel="nofollow" href="mailto:jayparmar7654321@gmail.com" target="_parent">contact us</a> immediately. Thank you.</p>
+
+                            </div>
+
+                            <div class="ml-lg-auto col-lg-3 col-md-6 col-12"  >
+                                <div class="team-thumb">
+                                    <img width= "1000px" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSEhIWFhUXFxUVFhcVFhUVFxUVGBcWGBUXFRUYHSggGBolHRUXITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGBAQFS0lHyUtKystLS0tLS0tLS0tLS0tKy0tKy0tLS0tLS0tKy0tLS0tLSstLS0vLSstLSsrKy0tLf/AABEIAN4A4wMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAECAwUGBwj/xABBEAABAgIGBwYEAwcEAwEAAAABAAIDEQQFEiExQQYiUWFxgbETMpGhwdFCcuHwUmKCBxQjM7LC8RZTkqIkY9IV/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAEEAgMF/8QAHxEBAAICAwEBAQEAAAAAAAAAAAECAxEhMUESIgQy/9oADAMBAAIRAxEAPwDxOld5a9UCbBtbM+ZWVTMRwWtU9zGnjPhMqLHbKp/ePE9UbVw1OZ6ISszru+Z3VG1WNQcSqegawGseX9IWrUDZs/WejVmVkNY8v6WrTqL+WfmP9LVFjsDXHfPJE1H3Hja5vQyQtbztX7AjdHpFrxvB8B/hJI7B1u0gieJEz4lKqR3v0+qlXD7TrWUgOvulUmLuXqielXHw8D6K3RsfxD8h6hQrn4eB9ENQaQ5hNm4lsp7M0lY7bNZ0MxBcRcTMkiQJ/wAKVAqIw3Bzojb24AOJE5SnddzWP+8Frrr5XkmZFs4nir2UlwkZm0TMEum6/MDAHj9VzyvDVrCrHOZqEG/AiRwv2rGoUJzIga4FpE7iPu5dRQHYCxEcZTMhOztmXXt5yKVJoUQStQzK+zasxTyLTPw+im3WmBTf5Z+b1KAq5s3tE8/RaNZNkwi7EG7C8koCqmjtGz2nounPq2nNk3legIHebxHVH04SaUBBGsOI6qpPbXf3VkHvc1sOGqscd7mEgsKcLjzVEDEol4uPNCwMSgk4XKliviqmDiiLX+6oV4vJ4lUpBJnYlJO7FJVF1M7x2X+616lOqNl/UrKp3e5nrJatSd1v6uqix2y6zb/EduJCOqsyh/qQla993zFHVSR2cvzHoFT1n1mdY8ui1KgE2EfmJ8m+yzq1bJx4+UgjqhfJrvm9AosdqNIWSiHg1F6Mt1XHY5vgQ4H0Q+kv8zw6FF6LHVijC9h8CPdSeljtRpFCDbIGwdShqkPf/T6o3Sf4eE/NyEqMd/dZ9VY6Sez1xgOfUICiQrTgOC0a6nJpOw9QgavcQ9J6PXYVdox22YmSL3Lfhfs8eG6pHaEk2pdJ81Ro5EOrLAmf3zkvR4MRxskiVwHhv5LDbJaJfRphpMdOA/0LWXekCG3hpiAA7w0CQO8zVMepaVCaXRoZGc25S2uM7XMy2L2CiRHyMxMb+CCrUXEZbMlbZZiNpGGszp4DpE1l8gWm6YcTP227Fz9A77ePotyvolqLGyAJIlnIyl08FhVeNcc+hWunTDb/AE06fCBZPH/Kx4B1hxHVbVMM2S+8VjUcaw4jquoS3bce3VPBYg7/AOodVtxXGyeCwx3+Y6qQWFuwchYGJ+80VENzufUoSDiqiT/dVw8Ve9t3JVQcURYBfNDok5obNIJIpJJKoIp/fPF3UyWtUvcHE+qyqYJuLhtPUrUqU6jeJ9VF9Zta/wAx3zFG1V3B8x9EHW38x3EomqH3D5j0Huqehq0GuTtl0CLqTuu4np9FRW5m5EVK3VdxP9Ki+o6QHXPBvRaGibA5r27SB4td6hZleOJiO4NHkjdGHSES+6bOsj5FSeljtDSGdllrvBpB5PchalPf/T6ozSpsnk5FrCOZM/MeaCqY94bbPqUjpJ7E1zeGjlPmEDQ2Sc6eweCPr6UmgZAnzCFoN7gXYEAXbiJjik9Oojl0FU6Uw4UmmG4SN5Bn5L0CpdN4cWE9kIF7w0uDZa8hKd2a5mp9GYTtcEFpvILQb+KJ0EhQ4VbAQwPiBw3G4cllt8T010+66306eL+0qj0cWXteXbAMN53K+g6aClvEMQSx2N52Y3cpcVoVtopRoz+1LrDzMd1pBJxvIzWtBq+FAhgBrSWtkDZa26W4XBec/Py9NW+niWlFUF1MpnZlrWQ4fauLjITLQbDd7iDIbiuLoJk8c+i9N01Ih0WNFtm1Sogaxkh3Yeq908Q2TCN9teY0TvDgei14p3VkzREWaUaNqS2+6yqMdZvzDqjovdJ4IKi99vzDqvSHjLdjG48PZYPx81uR3aqw563NSFsKiYHghoAv5oqLghqOqi2JhyVNGF6teLuKhRTIm5Q9SccUOcVbkqpXqwkkkkkqgyrrIM3sttaHOLZ2Z3SbMjK04E7ZI6q4xdeZTtZADLYMFGo6KYrnQ2957JNyvEaGcTuaUVBoL4dwgvN859o2/Ye6ZJKwyK1754lEVQbh83sio1CtGboDpn/3N/8AhXwqqiMY6MGAQmFtoF4c4WgDumgx6yM3O3EDrNF1QNQ/Mf6fqhq0x4yPkURU7tQ/N6BRfVddd48kTo8Log2iXlcha3drHkr6iwd8zfO5PFjtbpJFtWT+VvUoKqPi/T6qdbn4fwj+4n1VdVYO/T6p4nq+tsOIQ9CGq6/ANcOMwD5KysYwIlMT3XoSj0gi4AXgNKmuDfLutG9IbEItcQLjec0NUNOpQpQiw4bSGlzrdmYDXG8k55LAoTmzMNzZh2G0O3eC6rREOabDaOXk3A9tFhkDk4SXhNYjbXS021G3q8Ckl0D/AMiIxr3GYIa5jZYiczjvu4Kin04htgmd1xGzBNQqrhvgkUmBZuvaYkR44zc4rJixe1f2TMALMx8DAJAk7dg9is1++GnfjyOvq1iUg23kSaLLGtEmtbfgNpxJzKxKKdbkVpxaENaHORa4t2gkEg9Dmgf3OI2ZlPhf5Yr6MRqHy5nc8pxXXIai95vEKxzrlVR+8OIQa73TbyWP8XP1Wm593JZZ73NIJGRnXfe5UUc3H7ySeZpUfB3ApJCb8FGi/EpPwUaL8Snh6rUQpEqAK6Q6SdJEX0Rz8Wz1QSZZNumUVCpLi2Te0A2B7pDah6rjNaXhxkHQ3MwneZEdFfQHaruaih4zxna5uJ9EoNpxk0kNMgb/ALmmp+J4qygGQ5+yoVZbNkh5K2qjq/q9lRTz1U6tdcePoi+o1ljPh6q+qHgNcSZXtvKopgnLgFS5sruqaTepEVnSmvcbOBlebsAgQ8gSBMlJzVAppNmTtMjNMkg0XXyIxxBW3U+kT4b2kgmQlq4n7vXP0aJMSzHRH1e6zEDrt88wvK0eS9qWnx6dB0mpFKAYxrmTEnOdKcvytHqtN1IZRKO55waC45lxlmcybgsLR2ksDZ57tqx/2iV4CxtGYZkkOfuAva07yZHks8U+rahq+/ms2meXHikFxtHFz7R4lwnLxPijYcTb93rIjOkBLKSIiRbJHAHyW988ZSqE14nntHrtWSaK5jhMXTxyWhBimTtzMDxmiodJGqHDEEncLpTTQzHFANxW1TqGJF8O8ZjZw9litxXOtKlO9To4ucqSrIGDuB6FSSE3HzSo+DlGalR3XOU8X1WSoNVjgql0kpTSUEkRaRZIz3HA8dyNo75gnCbsBluQdIx8URQzq8yioU378FOg4c/QKum4/exToWB4+yBqbh9/eSeg4H7yTU726JULA8UPUIr9fhcrTeEMTrHiURKXofQ7lYRXY+iqe1FtGYwOI2FQiQ0AkkytexKwgqVzIssCQd2CiWK1lFnmpo2Pg15Ea2y03/iOI4BBAkmZJOczeSd52pBgwGGZ2p2db/ZIrEdLMzPZo2XFEUsXA7gqIuXFW0s90bwukWQdm288MvRM+ITM78dvAKMN/elmQ3kAoPMzLIID4EWQuWTSIdl52YjmtFokEFWA1mnd6n3SQKVZAwdwPQqoq6EdU8+i4lYMcFKjYOVc1ZR8CkrHZnlUq1VBVJMknSRE42PNX0TDn7IeIURRcOfsiq6Sc96toWHP2UaYME9Dw5+yh6VMNyVEwPFNSymouH3uVPUJaxGc7vZXQnjDLf8ADuO5DRDeVNhnj4/TNVBIF5G3r7/RIPBnyPiq75bd4ylgqGvQExGJnNTh81aAqBXqwPuUI2xJQXOkGyGJ9UmhDtfMophuQQiCRClHOs37yTRMVVEfe3kqGhRLjx9FbDMkECiGv8fvxKgLnt57h7qinmdnn6JQ77vv6lV006wGQCAcqxhuPPooFSabiuZWDKUI3FQUmd0oHbgqwpjBQCoSSSSIdyvoxu5+yHcr4Bu5+yiwemZJUbA8U1JySo+BQ9KkqMF0hzT0hVtNyo1aJVPagEGRK06PodSHYPhkb3PH9pU6jiXALq6BFLXblmtktE8NNcVZjliM/Z/SZWnRIMtxiH+0LhaRCLHOYcWktPEGRX0KJGE3gvEdMqOGUyLLBxDh+oTPnNdYsk2nUuMuOKxEwyGPREOIhArIRvWh4LIpmU0Up81VGKB4W1WNiKtuCjNBY6Iqy5RSJUFtGo7ojrLGlxxkLzLgtNlR0qV1GjcoLz0Ct0SZ/Ec7YAPH/C9f0Xjyu3Lxvlms609seKLRvbyKj6O0xxkKNFGU3tMMf95BCaRVa6jxuzeQTYa4ywvF8tuBvXvdMMyvKP2nwR2kN4zDmnleOpXNM82tp3kwRWu3DlTGCgVMd1e7Ogpt7pVasZ3T97EkRTJ0yqGSSSQOVZCVZVkFFPSCngG5RjHqngqHpR1WMFZHVYwVG5U0bArr4Ee4FcNVmXFd5V9XmIwSN9yyZeJa8XMOtbSB2cty8d0xi2qXE3WR5D3XowpBZaY+6yJ37F5PWEftIj3/AInOdyJu8lcEczKf0TxEBk7TJMktTImHFMpNak5UOTcoBPNMgQUU5TKDW0fiyevVKhpcrJ+8F5BVz5PHh6ru6vppFkC/BZs0ctWGeHd0imgrzr9o8UFsMbXE+A+oXUGIbMyuG08drQh+Vx8SPZeWGP3D1zT+JcqVLJRT5LcwmU24fe5VqxmH3tCEIJlIqKISSSSBypMdJRKlDQKIpQlGInhIvp4qrCnEUEGnU+I4+y9Q0ejtbKa8mokWQmMjPxXZ1HWNoCeKy5q7acFtOn0ugCLAiWO8WOllMywXjZK9thxWvFkyI8R9VwGlWihYTFgNJbi5gvLd7d27LowWiOJXPSZ/UOQThMktTItdEukBJVzTJIHSSSQMkkkgthzulja87l6ToxDMmzF+BXEaPVW6NEBEw1pBLt+IA3r1SrqHIDcsv9FvGv8Anr6JpkIBuC8u00iTisGxh83Eei9KreOGNvK8q0nj240/yjzJPquP54/Tv+mfyx0+SZPktrCZWDuqtTyCBiopyUyBJJJIHTtKinCB3J2FRKQQScVFIpkF1GiAEzwIkj6FSjDMskC2jEiagQ4Lm1duotp6FVdcAyv3cF1NGitiiUl49RaYQbl0lT16W3TWW+KYaqZYkVpdorOcWA3Wxc0fFvb+brxx4WzkV6rRK7a83me3gg9JNEWRpxIJDYmJHwv47DvXePLriznJi3zV5s5hCir6TR4kJxY9pa4Yg/d4UBF/KPBaWVWnkpuibAAoEoGWzUFSOjutOmGA/wDLcPdE6PaNPjEPeCGZDN3sF6TV1VMhtExJokBddwC8MuXXENGLDvmVNTVUGNDWtAG5atIjthtluVVMrVkNpa3hNcFX2kMhJpm5ZoibS0zaKwJr6ndq/swdUXvOUti4enx7cRzhgTdwFw8gpvpUQgjI3naeJVRgzExj1WzHj+WPJk+lCfJMnmvR5GU53KCnkiwgkkkiEkkkgSdMkgcpBMkgcpBMkg04EUSUY4CDhPkrnRNqqhnKcOKQoxBfcmbvwU0bHwqe4Zroaq0rc1wBvHFclu++KTXkLztjiXpXJMPSaw/dqWyzGaWvF7IjcWzw5bjdwXIU3RKkMYYjQIjBOZZMkAZlhv8ACaLqKOXuY21u5GV3Bb1Cr5lGpHZRmuEjKYwsG8OHivKs2rOoe01rfmXD1TU0akOswmTlicAOJXQ0XRGM19prWGybu0eNY7Q2yRjgCSuopNbthWxQ4NprTN3ZgFoLjmW8pqBpL2tEWM0NJtOLQe7dnvVtlt4VwVjuVNR1yJ2YtmYBLSBKZGLHDAOGPjhiXrnSoASnvkuDplMNqI6RAe4uYcM5zG4zvWY95OJVnDEztxGeYjTbrLSB75hpuWSL7ziqFNk161rFenja027FQ0QxqCD5KwR12imlMk47MlSiaU6YCHUQykcAoqRwQRSSSQJJJJB6FFqGinCK3mwhCRNG4OT2HgjYj6LkT4hDPMDJ58QqBXaMQ8nN8ZKh+jLcnD/kERGMLKIfFZFMigYPJTQufo7kOrfdZNY0TsnWTOcpmaT3TzVEYXyUEAVY12XgqlMXjeEEU4KYlJA8/JMSmSQbOjcQCIJmUp/RXaUue54e5pDRqtO3NZVX2g9sriSJE3Cc8zsXpVPp1Xyhwore3iNPcYDIuIumAdcLytxbbTjj6pMbYOiNdRKI0RHw3CG8kNNg2XTxDTKRKnpzWeAaJWh3ZglozF3Ic1p1nS6VHYWiCKPChi0XRGloAGFlpxK87p0cveTaLspnE75ZKVr9Tt1kt81+VDnTvTJJ17Mhk80ySBwU4TJBBq1NVTqQ4tbPVEyccSAB18Frf6MfmT4KjQyO5sZ4aZTZ0c33XVxoz83rpHOjQx2Zd5KbdEBm4+IWw4u/3FS9v500bADROHmf+ycaNQRmPElElrc3lN/C/GfH6IKv/wACB+VJWWoX4kkHEduUu2KqSXKre04pWm71UkgIa9m9VRiCTLBQSQOEk7UxQIoyiw2FptODTPxuQadyAx1Hh/7gUmQoYvtgrPSQHRXTuDpm6QGZyW/H0c7KGYz6UyFFlPs2kuN+0jCewTXJtMr1rU6jEwmRXuLnO23yA4rmz0pManhpUGlU50Bzm2orHBzHMucLEr3FmK5xkMfiC16grBrHi+K03yMOIBIyza5pBF14msWNELnFxxJJPEmZUr3K5J3ETtd2LfxhTbDaPiCDT5Lt5L6UcJGaoTJ0CTtTBThi9AVV9J7N1qctUjp9ES+t3fi6rNOHh7KpUaRrR34iomsXbSs9OpsFup52lQNLO0oZJBf+8nakqEkH/9k=" class="img-fluid" alt="Trainer">
+
+                                    <div class="team-info d-flex flex-column">
+
+                                        <h3>Matt Roberts</h3>
+                                        <span>Yoga Instructor</span>
+
+                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mr-lg-auto mt-5 mt-lg-0 mt-md-0 col-lg-3 col-md-6 col-12"  >
+                                <div class="team-thumb">
+                                    <img width="1000px" src="data:image/jpeg;base64,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" class="img-fluid" alt="Trainer">
+
+                                    <div class="team-info d-flex flex-column">
+
+                                        <h3>Brad Schoenfeld</h3>
+                                        <span>Body trainer</span>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+               </div>
+     </section>
+     <div class="cnt">
+        <div class="container1">
+            <h2 class="head">CHECK YOUR BMI</h2>
+            <label for="weight">Weight:</label>
+            <input class="inp1" type="number" id="weight" placeholder="Enter weight">
+            <select class="slc" id="weightUnit">
+                <option value="kg">kg</option>
+                <option value="lbs">lbs</option>
+            </select><br>
+    
+            <label for="height">Height:</label>
+            <input class="inp1" type="number" id="height" placeholder="Enter height">
+            <select class="slc" id="heightUnit">
+                <option value="cm">cm</option>
+                <option value="ft">ft</option>
+            </select><br>
+            <br>
+    
+            <button class="btn1" onclick="calculateBMI()">Calculate</button>
+            <div id="result"></div>
+        </div>
+        <div class="bmi-chart">
+            <img src="https://www.hdfcergo.com/images/default-source/health-insurance/how-reliable-is-the-bmi-measure.svg" height="425" alt="BMI Chart">
+        </div>
+        </div>
+    
+        <script>
+            function calculateBMI() {
+                let weight = parseFloat(document.getElementById('weight').value);
+                let height = parseFloat(document.getElementById('height').value);
+                let weightUnit = document.getElementById('weightUnit').value;
+                let heightUnit = document.getElementById('heightUnit').value;
+    
+                // Convert weight to kg if necessary
+                if (weightUnit === 'lbs') {
+                    weight = weight * 0.453592;
+                }
+    
+                // Convert height to meters if necessary
+                if (heightUnit === 'ft') {
+                    height = height * 0.3048;
+                } else if (heightUnit === 'cm') {
+                    height = height / 100;
+                }
+    
+                let bmi = weight / (height * height);
+                document.getElementById('result').innerText = "Your BMI is: " + bmi.toFixed(2);
+            }
+        </script>
+
+     <!-- FOOTER -->
+     <footer class="site-footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="ml-auto col-lg-4 col-md-5">
+                        <p class="copyright-text"><b>Copyright:</b><br>&copy; 2024 FitAura. All content on this site is the property of FitAura.</p>
+                        
+                      
+                    </div>
+
+                    <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
+                        <p class="mr-4">
+                            <i class="fa fa-envelope-o mr-1"></i>
+                            <a href="mailto:@gmail.com"><b>Contact Us:</b><br>
+                                Email: <a href="mailto:info@FitAura.com">info@FitAura.com</a><br>
+                                Phone: +123 456 7890<br>
+                            </a>
+                        </p>
+
+                        <!-- <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p> -->
+                    </div>
+                    
+               </div>
+          </div>    
+     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="membershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <h2 class="modal-title" id="membershipFormLabel">Membership Form</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <form class="membership-form webform" role="form">
+                <input type="text" class="form-control" name="cf-name" placeholder="John cena">
+
+                <input type="email" class="form-control" name="cf-email" placeholder="Johncena@gmail.com">
+
+                <input type="tel" class="form-control" name="cf-phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+                <textarea class="form-control" rows="3" name="cf-message" placeholder="Additional Message"></textarea>
+
+                <button type="submit" class="form-control" id="submit-button" name="submit">Submit Button</button>
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="signup-agree">
+                    <label class="custom-control-label text-small text-muted" for="signup-agree">I agree to the <a href="#">Terms &amp;Conditions</a>
+                    </label>
+                </div>
+            </form>
+          </div>
+
+          <div class="modal-footer"></div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+ <!--scripts part--> 
+ <script src="js/jquery.min.js"></script> 
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/aos.js"></script>
+ <script src="js/smoothscroll.js"></script>
+ <script src="js/custom.js"></script>
+
+
+
+    
+</body>
+</html>

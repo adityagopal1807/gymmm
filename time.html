@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheeet" href="css/aos.css">
+    <!--main page css-->
+    <link rel="stylesheet" href="css/main.css">
+    <style> .custom-btn {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        
+      }
+      
+      .custom-btn:hover {
+        background-color: #f13a11;
+        color: #fff;
+      }
+      .float-right {
+  float: left;
+  margin-left: 820px; /* add some margin to create some space between the button and the edge of the page */
+
+  
+}
+/* Custom Sign Up Button */
+.custom-signup-btn {
+    display: inline-block;
+    
+    font-size: 1em;
+    color: #fff;
+    background-color: #f13a11; /* Red background */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+   
+}
+
+
+/*
+   SCHEDULE             
+*/
+
+.schedule {
+  background: #171819;
+}
+
+.schedule-table {
+  display: table;
+  border: 0;
+  text-align: center;
+}
+
+.schedule-table strong,
+.schedule-table span {
+  display: block;
+  text-align: center;
+}
+
+.schedule-table strong {
+  color: #ffffff;
+}
+
+.schedule-table span {
+  color: #909090;
+}
+
+.schedule-table span,
+.schedule-table small {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.schedule-table small {
+  position: relative;
+  top: 10px;
+}
+
+.table .thead-light th,
+.schedule-table tr td:first-child {
+  background: #f13a11;
+  border: 1px solid #212122;
+  color: #ffffff;
+}
+
+.schedule-table .thead-light th {
+  border-bottom: 0;
+  text-transform: uppercase;
+}
+
+.table-bordered td, 
+.table-bordered th {
+  border: 1px solid #212122;
+}
+
+.table-bordered td {
+  padding-bottom: 22px;
+}
+
+.table td, .table th {
+  padding: 1rem;
+}
+
+
+</style>
+   
+</head>
+<body>
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+    
+            <!-- FitAura Logo -->
+            <a class="navbar-brand" href="index.html">
+               <img src="images/1.jpg.png" width="100px" height="50px"  >
+                FitAura
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                        <a href="main.html" class="nav-link smoothScroll">Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="main.html" class="nav-link smoothScroll">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="class.html" class="nav-link smoothScroll">Classes</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="time.html" class="nav-link smoothScroll">Schedules</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link smoothScroll">Contact Us</a>
+                    </li>
+                </ul>
+    
+                <ul class="button-group">
+                    <li><a href="sign.html" class="btn custom-signup-btn">Sign Up</a></li>
+                  
+                </ul>
+                <ul class="social-icon ml-lg-3">
+                    <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+                    <li><a href="" class="fa fa-twitter"></a></li>
+                    <li><a href="" class="fa fa-instagram"></a></li>
+                </ul>
+            </div>
+    
+        </div>
+    </nav>
+    
+                
+            </div>
+     
+
+        </div>
+    </nav>
+    
+
+    <section class="schedule section" id="schedule">
+        <div class="container">
+             <div class="row">
+
+                     <div class="col-lg-12 col-12 text-center">
+                         <h6 data-aos="fade-up">our weekly schedules.</h6>
+
+                         <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">Workout Timetable</h2>
+                      </div>
+
+                      <div class="col-lg-12 py-5 col-md-12 col-12">
+                          <table class="table table-bordered table-responsive schedule-table" data-aos="fade-up" data-aos-delay="300">
+
+                              <thead class="thead-light">
+                                  <th><i class="fa fa-calendar"></i></th>
+                                  <th>Mon</th>
+                                  <th>Tue</th>
+                                  <th>Wed</th>
+                                  <th>Thu</th>
+                                  <th>Fri</th>
+                                  <th>Sat</th>
+                              </thead>
+
+                              <tbody>
+                                  <tr>
+                                     <td><small>7:00 am</small></td>
+                                     <td>
+                                         <strong>Cardio</strong>
+                                         <span>7:00 am - 9:00 am</span>
+                                     </td>
+                                     <td>
+                                         <strong>Power Fitness</strong>
+                                         <span>7:00 am - 9:00 am</span>
+                                     </td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>
+                                         <strong>Yoga Section</strong>
+                                         <span>7:00 am - 9:00 am</span>
+                                     </td>
+                                  </tr>
+
+                                  <tr>
+                                     <td><small>9:00 am</small></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>
+                                         <strong>Boxing</strong>
+                                         <span>8:00 am - 9:00 am</span>
+                                     </td>
+                                     <td>
+                                         <strong>Areobic</strong>
+                                         <span>8:00 am - 9:00 am</span>
+                                     </td>
+                                     <td></td>
+                                     <td>
+                                         <strong>Cardio</strong>
+                                         <span>8:00 am - 9:00 am</span>
+                                     </td>
+                                  </tr>
+
+                                  <tr>
+                                     <td><small>11:00 am</small></td>
+                                     <td></td>
+                                     <td>
+                                         <strong>Boxing</strong>
+                                         <span>11:00 am - 2:00 pm</span>
+                                     </td>
+                                     <td>
+                                         <strong>Areobic</strong>
+                                         <span>11:30 am - 3:30 pm</span>
+                                     </td>
+                                     <td></td>
+                                     <td>
+                                         <strong>Body work</strong>
+                                         <span>11:50 am - 5:20 pm</span>
+                                     </td>
+                                  </tr>
+
+                                  <tr>
+                                     <td><small>2:00 pm</small></td>
+                                     <td>
+                                         <strong>Boxing</strong>
+                                         <span>2:00 pm - 4:00 pm</span>
+                                     </td>
+                                     <td>
+                                         <strong>Power lifting</strong>
+                                         <span>3:00 pm - 6:00 pm</span>
+                                     </td>
+                                     <td></td>
+                                     <td>
+                                         <strong>Cardio</strong>
+                                         <span>6:00 pm - 9:00 pm</span>
+                                     </td>
+                                     <td></td>
+                                     <td>
+                                         <strong>Crossfit</strong>
+                                         <span>5:00 pm - 7:00 pm</span>
+                                     </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+
+                      <div class="float-right">
+                        <a href="owntime.html" class="btn custom-btn">
+                          Create Your Own Timetable
+                        </a>
+                      </div>
+
+     </div>
+    </div>
+</section>
+<br>
+<footer class="site-footer">
+    <div class="container">
+         <div class="row">
+
+              <div class="ml-auto col-lg-4 col-md-5">
+                  <p class="copyright-text"><b>Copyright:</b><br>&copy; 2024 FitAura. All content on this site is the property of FitAura.</p>
+                  
+                
+              </div>
+
+              <div class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12">
+                  <p class="mr-4">
+                      <i class="fa fa-envelope-o mr-1"></i>
+                      <a href="mailto:@gmail.com"><b>Contact Us:</b><br>
+                          Email: <a href="mailto:info@FitAura.com">info@FitAura.com</a><br>
+                          Phone: +123 456 7890<br>
+                      </a>
+                  </p>
+
+                  <!-- <p><i class="fa fa-phone mr-1"></i> 010-020-0840</p> -->
+              </div>
+              
+         </div>
+    </div>    
+</footer>
+
+<script src="js/jquery.min.js"></script> 
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/aos.js"></script>
+ <script src="js/smoothscroll.js"></script>
+ <script src="js/custom.js"></script>
+
+    
+</body>
+</html>
